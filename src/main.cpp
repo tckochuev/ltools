@@ -3,16 +3,21 @@
 #include <stdexcept>
 #include <memory>
 #include <string>
+#include <cstring>
+#include <functional>
 
-//#include <l_bitmap.h>
+#include <l_bitmap.h>
 #include <lterr.h>
-#include <ltmm.h>
 #include <ltfil.h>
 
-#include <stringapiset.h>
-
-const char* MY_LICENSE_FILE("C:\\LEADTOOLS23\\license\\LEADTOOLS.lic");
-const char* MY_DEVELOPER_KEY("iswHXpNThJb/bVvDd9FDk5KRCMAXLmsI2t3u3sJp/TM=");
+//#include <stringapiset.h>
+// #ifdef _WIN32
+// const char* MY_LICENSE_FILE("C:\\LEADTOOLS23\\license\\LEADTOOLS.lic");
+// const char* MY_DEVELOPER_KEY("iswHXpNThJb/bVvDd9FDk5KRCMAXLmsI2t3u3sJp/TM=");
+// #elif __linux__
+// const char* MY_LICENSE_FILE("C:\\LEADTOOLS23\\license\\LEADTOOLS.lic");
+// const char* MY_DEVELOPER_KEY("iswHXpNThJb/bVvDd9FDk5KRCMAXLmsI2t3u3sJp/TM=");
+// #endif
 
 namespace tc
 {
@@ -75,20 +80,25 @@ public:
 
 private:
 	static std::string makeErrorString(Code code) {
-		auto uniqWErrorString = tc::makeUnique(ltmmGetErrorText(code), SysFreeString);
-		if(std::wcslen(uniqWErrorString.get()) == 0)
-		{
-			return "";
-		}
-		else
-		{
-			auto multiByteSize = WideCharToMultiByte(CP_UTF8, 0, uniqWErrorString.get(), -1, nullptr, 0, nullptr, nullptr);
-			assert(multiByteSize > 0);
-			auto uniqErrorString = std::make_unique<char[]>(multiByteSize);
-			WideCharToMultiByte(CP_UTF8, 0, uniqWErrorString.get(), -1, uniqErrorString.get(), multiByteSize, nullptr, nullptr);
-			assert(uniqErrorString[multiByteSize - 1] == 0);
-			return uniqErrorString.get();
-		}
+		constexpr size_t bufSize = 1024;
+		char errBuf[bufSize] = {0};
+		L_GetFriendlyErrorMessage(code, errBuf, bufSize, false);
+		return errBuf;
+		// auto uniqWErrorString = tc::makeUnique(ltmmGetErrorText(code), SysFreeString);
+		// if(std::wcslen(uniqWErrorString.get()) == 0)
+		// {
+		// 	return "";
+		// }
+		// else
+		// {
+		// 	auto multiByteSize = WideCharToMultiByte(CP_UTF8, 0, uniqWErrorString.get(), -1, nullptr, 0, nullptr, nullptr);
+		// 	assert(multiByteSize > 0);
+		// 	auto uniqErrorString = std::make_unique<char[]>(multiByteSize);
+		// 	WideCharToMultiByte(CP_UTF8, 0, uniqWErrorString.get(), -1, uniqErrorString.get(), multiByteSize, nullptr, nullptr);
+		// 	assert(uniqErrorString[multiByteSize - 1] == 0);
+		// 	return uniqErrorString.get();
+		// }
+
 	}
 };
 
@@ -113,7 +123,7 @@ int main(int argc, char** argv)
 		if(argc != 3) {
 			throw std::logic_error("Invalid arguments");
 		}
-		call(L_SetLicenseFile, tc::strdup(MY_LICENSE_FILE).get(), tc::strdup(MY_DEVELOPER_KEY).get());
+		call(L_SetLicenseFile, tc::strdup(LICENSE_FILE).get(), tc::strdup(DEVELOPER_KEY).get());
 		const path inputFile = argv[1];
 		const path outputFile = argv[2];
 		FILEINFO fileInfo{};

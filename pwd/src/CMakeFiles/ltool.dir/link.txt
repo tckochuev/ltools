@@ -1,0 +1,1 @@
+/usr/bin/x86_64-linux-gnu-g++ -g CMakeFiles/ltool.dir/main.cpp.o -o ltool  -Wl,-rpath,/home/wolfox/Downloads/ltools/Bin/Lib/x64 /home/wolfox/Downloads/ltools/Bin/Lib/x64//libltfil.so /home/wolfox/Downloads/ltools/Bin/Lib/x64//libltkrn.so 
