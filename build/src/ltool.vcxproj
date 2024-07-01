@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F69667DE-A6E8-3439-A1CD-E34B4A3C33D4}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ltool</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Bugs\ltools\build\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ltool.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ltool</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Bugs\ltools\build\src\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ltool.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ltool</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Bugs\ltools\build\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ltool.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ltool</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Bugs\ltools\build\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ltool.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ltool</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>QT_QML_DEBUG;WIN32;_WINDOWS;ltool;LTV23_CONFIG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;QT_QML_DEBUG;_WINDOWS;ltool;LTV23_CONFIG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\LEADTOOLS23\Lib\CDLL\x64\Lfheif_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltann_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltasr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltaut_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltbar_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltcon_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic2_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdis_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgfile_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimgdoc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgweb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\LtDocWrt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdrw_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltfil_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\lticr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgcor_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgopt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgsfx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgutl_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltivwm_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltivw_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp22_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp2_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp2_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltlst_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltmfuuidx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltml_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltmmuuidx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltmmx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltmrc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltntf_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltocr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdfcomp_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdf_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpnt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltPrinterClientInstaller_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltprinter_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltregex_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltscr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltsgm_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltsqlite_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltsvg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttlb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttmb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttwn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltvdlg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltvkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\LtWebKitEngine_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwia_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwvc_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwvc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltzmv_x.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Bugs/ltools/build/src/Debug/ltool.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Bugs/ltools/build/src/Debug/ltool.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>QT_QML_DEBUG;WIN32;_WINDOWS;NDEBUG;ltool;LTV23_CONFIG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;QT_QML_DEBUG;_WINDOWS;NDEBUG;ltool;LTV23_CONFIG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\LEADTOOLS23\Lib\CDLL\x64\Lfheif_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltann_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltasr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltaut_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltbar_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltcon_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic2_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdis_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgfile_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimgdoc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgweb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\LtDocWrt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdrw_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltfil_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\lticr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgcor_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgopt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgsfx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgutl_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltivwm_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltivw_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp22_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp2_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp2_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltlst_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltmfuuidx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltml_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltmmuuidx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltmmx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltmrc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltntf_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltocr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdfcomp_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdf_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpnt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltPrinterClientInstaller_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltprinter_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltregex_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltscr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltsgm_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltsqlite_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltsvg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttlb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttmb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttwn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltvdlg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltvkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\LtWebKitEngine_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwia_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwvc_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwvc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltzmv_x.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Bugs/ltools/build/src/Release/ltool.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Bugs/ltools/build/src/Release/ltool.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>QT_QML_DEBUG;WIN32;_WINDOWS;NDEBUG;ltool;LTV23_CONFIG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;QT_QML_DEBUG;_WINDOWS;NDEBUG;ltool;LTV23_CONFIG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\LEADTOOLS23\Lib\CDLL\x64\Lfheif_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltann_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltasr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltaut_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltbar_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltcon_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic2_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdis_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgfile_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimgdoc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgweb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\LtDocWrt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdrw_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltfil_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\lticr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgcor_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgopt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgsfx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgutl_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltivwm_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltivw_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp22_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp2_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp2_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltlst_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltmfuuidx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltml_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltmmuuidx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltmmx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltmrc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltntf_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltocr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdfcomp_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdf_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpnt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltPrinterClientInstaller_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltprinter_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltregex_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltscr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltsgm_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltsqlite_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltsvg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttlb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttmb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttwn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltvdlg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltvkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\LtWebKitEngine_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwia_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwvc_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwvc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltzmv_x.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Bugs/ltools/build/src/MinSizeRel/ltool.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Bugs/ltools/build/src/MinSizeRel/ltool.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>QT_QML_DEBUG;WIN32;_WINDOWS;NDEBUG;ltool;LTV23_CONFIG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;QT_QML_DEBUG;_WINDOWS;NDEBUG;ltool;LTV23_CONFIG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Bugs\ltools\build;D:\Bugs\ltools\include;C:\LEADTOOLS23\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\LEADTOOLS23\Lib\CDLL\x64\Lfheif_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltann_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltasr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltaut_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltbar_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltcon_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic2_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdic_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdis_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgfile_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimgdoc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgimg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdlgweb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\LtDocWrt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltdrw_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltfil_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\lticr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgclr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgcor_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgefx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgopt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgsfx_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltimgutl_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltivwm_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltivw_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp22_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp2_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltjp2_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltlst_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltmfuuidx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltml_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltmmuuidx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltmmx.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltmrc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltntf_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltocr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdfcomp_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdf_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpdg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltpnt_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltPrinterClientInstaller_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltprinter_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltregex_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltscr_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltsgm_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\ltsqlite_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltsvg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttlb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttmb_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Lttwn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltvdlg_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltvkrn_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\LtWebKitEngine_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwia_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwvc_ax.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltwvc_x.lib;C:\LEADTOOLS23\Lib\CDLL\x64\Ltzmv_x.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Bugs/ltools/build/src/RelWithDebInfo/ltool.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Bugs/ltools/build/src/RelWithDebInfo/ltool.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Bugs\ltools\src\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Bugs/ltools/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Bugs/ltools -BD:/Bugs/ltools/build --check-stamp-file D:/Bugs/ltools/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Bugs\ltools\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Bugs/ltools/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Bugs/ltools -BD:/Bugs/ltools/build --check-stamp-file D:/Bugs/ltools/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Bugs\ltools\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Bugs/ltools/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Bugs/ltools -BD:/Bugs/ltools/build --check-stamp-file D:/Bugs/ltools/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Bugs\ltools\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Bugs/ltools/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Bugs/ltools -BD:/Bugs/ltools/build --check-stamp-file D:/Bugs/ltools/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Bugs\ltools\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Bugs\ltools\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Bugs\ltools\build\ZERO_CHECK.vcxproj">
+      <Project>{AC6D2776-4601-3358-8DD6-25C58275670D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,487 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/RelWithDebInfo/ltool.exe"
+		},
+		{
+			"path" : "src/RelWithDebInfo/ltool.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG"
+				},
+				{
+					"fragment" : "-std:c++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "LTV23_CONFIG"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "ltool"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "D:/Bugs/ltools/build"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/Bugs/ltools/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "C:/LEADTOOLS23/Include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ltool::@145eef247bfb46b6828c",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Lfheif_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltann_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltasr_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltaut_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltbar_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\ltclr_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltcon_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdic2_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdic_ax.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdic_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdis_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdlgclr_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdlgefx_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdlgfile_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdlgimgdoc_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdlgimgefx_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdlgimg_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdlgkrn_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdlgweb_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\LtDocWrt_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltdrw_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltefx_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltfil_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\lticr_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltimgclr_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltimgcor_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltimgefx_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltimgopt_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltimgsfx_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltimgutl_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltivwm_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltivw_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltjp22_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltjp2_ax.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltjp2_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltkrn_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltlst_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\ltmfuuidx.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\ltml_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\ltmmuuidx.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltmmx.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltmrc_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltntf_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltocr_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltpdfcomp_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltpdf_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltpdg_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltpnt_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\ltPrinterClientInstaller_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltprinter_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltregex_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltscr_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltsgm_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\ltsqlite_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltsvg_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Lttlb_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Lttmb_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Lttwn_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltvdlg_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltvkrn_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\LtWebKitEngine_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltwia_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltwvc_ax.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltwvc_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\LEADTOOLS23\\Lib\\CDLL\\x64\\Ltzmv_x.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "ltool",
+	"nameOnDisk" : "ltool.exe",
+	"paths" : 
+	{
+		"build" : "src",
+		"source" : "src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/main.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
