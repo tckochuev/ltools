@@ -1,8 +1,9 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.20)
+project(ltools VERSION 1.0 LANGUAGES C CXX OBJC OBJCXX)
 
-# Установите название проекта и версию C++
-project(ltool VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_OBJCXX_STANDARD 17)
+
+enable_language(OBJCXX)
 
 add_subdirectory(src)
