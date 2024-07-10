@@ -39,7 +39,7 @@ if(APPLE)
 elseif(WIN32)
 	set(LEADTOOLS_LIBDIR "C:/LEADTOOLS23/Lib/CDLL/x64")
 elseif(UNIX)
-	set(LEADTOOLS_LIBDIR "/home/wolfox/Documents/ltools-conan/x64")
+	set(LEADTOOLS_LIBDIR "/home/wolfox/Documents/ltools-conan/x64/Release")
 endif()
 
 if(NOT APPLE)
