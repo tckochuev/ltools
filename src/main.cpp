@@ -1,4 +1,6 @@
 #include <iostream>
+#include <chrono>
+
 #include "VSLeadtoolsManager.h"
 
 int main(int argc, char* argv[])
@@ -15,7 +17,10 @@ int main(int argc, char* argv[])
         Path outDir = argv[3];
         fs::ImageFormat outFmt = argv[4];
         fs::IncrementNameGenerator nameGen{1, std::string(".") + outFmt};
+        auto tp1 = std::chrono::steady_clock::now();
         exporter.exportAsImages(inFile, inFmt, outDir, outFmt, nameGen, {}, [](auto&&) {});
+        auto tp2 = std::chrono::steady_clock::now();
+        std::cout << std::chrono::duration_cast<std::chrono::seconds>(tp2 - tp1).count() << std::endl;
     }
     catch(const std::exception& e)
     {

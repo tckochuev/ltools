@@ -3,6 +3,9 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 set(SRC
 	main.cpp
 	VSUtils.h
+	VSError.h
+	VSError.ipp
+	VSError.cpp
 	VSExportFileAsImages.h
 	VSIInterruptible.h
 	VSLeadtoolsManager.h
@@ -36,7 +39,7 @@ if(APPLE)
 elseif(WIN32)
 	set(LEADTOOLS_LIBDIR "C:/LEADTOOLS23/Lib/CDLL/x64")
 elseif(UNIX)
-	set(LEADTOOLS_LIBDIR "/home/wolfox/Downloads/ltools/Bin/Lib/x64/")
+	set(LEADTOOLS_LIBDIR "/home/wolfox/Downloads/ltools/Bin/Lib/x64")
 endif()
 
 if(NOT APPLE)

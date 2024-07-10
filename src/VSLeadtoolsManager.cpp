@@ -104,8 +104,11 @@ void VSLeadtoolsManager::exportAsBitmaps(const Path& file, const FileFormat& fil
 	});
 	LOADFILEOPTION loadOpt{};
 	call(L_GetDefaultLoadFileOption, &loadOpt, sizeof(LOADFILEOPTION));
+	loadOpt.uStructSize = sizeof(LOADFILEOPTION);
 	checkInterrupt();
 	FILEINFO fileInfo;
+	fileInfo.Flags = 0;
+	fileInfo.uStructSize = sizeof(FILEINFO);
 	if constexpr (thumbnail)
 	{
 		call(L_CreateBitmapList, &bitmaps);
@@ -146,6 +149,7 @@ void VSLeadtoolsManager::exportAsBitmaps(const Path& file, const FileFormat& fil
 			}
 		});
 		call(L_RemoveBitmapListItem, bitmaps, 0, uniqBitmap.get());
+		checkInterrupt();
 		forEachBitmap(std::move(uniqBitmap));
 	}
 }
