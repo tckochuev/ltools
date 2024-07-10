@@ -17,7 +17,7 @@ class VSLeadtoolsManager :
 {
 public:
 	inline static const std::unordered_set<FileFormat> supportedFileFormats = {
-		FileFormats::Ppt, FileFormats::Pptx, FileFormats::Odp
+		FileFormats::Ppt, FileFormats::Pptx
 	};
 
 	inline static const std::unordered_set<ImageFormat> supportedImageFormats = {
@@ -101,6 +101,7 @@ private:
 
 	static const tc::UnorderedBimap<FileFormat, decltype(FILE_PPTX)> fileFmtMap;
 	static const tc::UnorderedBimap<ImageFormat, decltype(FILE_PNG)> imgFmtMap;
+	static const std::unordered_map<ImageFormat, L_INT> imgFmtQFactorMap;
 
 	template<typename Interface, typename F>
 	void exportAsBitmaps(const Path& file, const FileFormat& fileFmt, F forEachBitmap);

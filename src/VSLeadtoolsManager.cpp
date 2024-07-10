@@ -81,6 +81,11 @@ boost::assign::list_of<decltype(imgFmtMap)::relation>
 (ImageFormats::Png, FILE_PNG)
 (ImageFormats::Jpg, FILE_JPEG);
 
+const std::unordered_map<ImageFormat, L_INT> VSLeadtoolsManager::imgFmtQFactorMap = {
+	{ImageFormats::Png, 0},
+	{ImageFormats::Jpg, 2}
+};
+
 void VSLeadtoolsManager::setLicense()
 {
 	call(L_SetLicenseBuffer, const_cast<L_UCHAR*>(LEADTOOLS_lic), LEADTOOLS_lic_len, const_cast<L_CHAR*>(LEADTOOLS_lic_key));
@@ -204,6 +209,7 @@ String VSLeadtoolsManager::saveBitmap(
 {
 	assert(VSLeadtoolsManager::supportedImageFormats.count(imageFormat));
 	assert(imgFmtMap.left.count(imageFormat));
+	assert(imgFmtQFactorMap.count(imageFormat));
 
 	auto checkInterrupt = [this] {Interface::checkInterrupt();};
 
@@ -215,7 +221,7 @@ String VSLeadtoolsManager::saveBitmap(
 		&bitmap,
 		imgFmtMap.left.at(imageFormat),
 		0,
-		0,
+		imgFmtQFactorMap.at(imageFormat),
 		nullptr
 	);
 	checkInterrupt();
