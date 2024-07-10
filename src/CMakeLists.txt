@@ -1,42 +1,75 @@
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-#Boost
-find_package(Boost REQUIRED COMPONENTS regex program_options)
-if(Boost_VERSION VERSION_LESS_EQUAL "1.62")
-	target_compile_definitions(ltools PRIVATE _HAS_AUTO_PTR_ETC=1)
-endif()
-
-add_executable(
-	ltools
+set(SRC
 	main.cpp
 	VSUtils.h
 	VSExportFileAsImages.h
 	VSIInterruptible.h
 	VSLeadtoolsManager.h
 	VSLeadtoolsManager.cpp
-	VSLeadtoolsManager.mm
 	LEADTOOLS.lic.h
 	LEADTOOLS.lic.key.h
 )
 
+if(APPLE)
+	list(APPEND SRC VSLeadtoolsManager.mm)
+endif()
+
+add_executable(
+	ltools
+	${SRC}
+)
+
+#Boost
+set(Boost_USE_STATIC_LIBS ON)
+find_package(Boost REQUIRED COMPONENTS system filesystem)
+if(Boost_VERSION VERSION_LESS_EQUAL "1.62")
+	target_compile_definitions(ltools PRIVATE _HAS_AUTO_PTR_ETC=1)
+endif()
 target_include_directories(ltools PRIVATE ${Boost_INCLUDE_DIRS})
 target_link_libraries(ltools PRIVATE ${Boost_LIBRARIES})
 
-set(LEADTOOLS_LIBDIR
-	"/Users/dev/Downloads/leadtools23_apple/Bin/Xcode/Frameworks/macOS"
-)
+if(APPLE)
+	set(LEADTOOLS_LIBDIR
+		"/Users/dev/Downloads/leadtools23_apple/Bin/Xcode/Frameworks/macOS"
+	)
+elseif(WIN32)
+	set(LEADTOOLS_LIBDIR "C:/LEADTOOLS23/Lib/CDLL/x64")
+elseif(UNIX)
+	set(LEADTOOLS_LIBDIR "/home/wolfox/Downloads/ltools/Bin/Lib/x64/")
+endif()
 
-set(LEADTOOLS_LIB
-	"${LEADTOOLS_LIBDIR}/Leadtools.Codecs.framework/Leadtools.Codecs"
-	"${LEADTOOLS_LIBDIR}/Leadtools.framework/Leadtools"
-	#${LEADTOOLS_LIBDIR}/Leadtools.Codecs.framework
-)
+if(NOT APPLE)
+	target_compile_definitions(
+		ltools PRIVATE
+		"LTV23_CONFIG"
+	)
+endif()
 
-set(LEADTOOLS_INCDIR
-	#"${LEADTOOLS_LIBDIR}/Leadtools.Codecs.framework/Headers"
-	"${LEADTOOLS_LIBDIR}/Leadtools.Codecs.framework"
-	"${LEADTOOLS_LIBDIR}/Leadtools.framework"
-)
+if(APPLE)
+	set(LEADTOOLS_LIB
+		"Leadtools.Codecs.framework/Leadtools.Codecs"
+		"Leadtools.framework/Leadtools"
+	)
+elseif(WIN32)
+	set(LEADTOOLS_LIB Ltfil_x.lib Ltkrn_x.lib)
+elseif(UNIX)
+	set(LEADTOOLS_LIB libltfil.so libltkrn.so)
+endif()
+
+list(TRANSFORM LEADTOOLS_LIB PREPEND "${LEADTOOLS_LIBDIR}/")
+
+if(APPLE)
+	set(LEADTOOLS_INCDIR
+		"${LEADTOOLS_LIBDIR}/Leadtools.Codecs.framework"
+		"${LEADTOOLS_LIBDIR}/Leadtools.framework"
+	)
+elseif(WIN32)
+    set(LEADTOOLS_INCDIR "C:/LEADTOOLS23/Include")
+elseif(UNIX)
+	target_compile_definitions(${TARGET_NAME} PRIVATE FOR_LINUX)
+	set(LEADTOOLS_INCDIR "/home/wolfox/Downloads/ltools/Include/")
+endif()
 
 target_link_libraries(ltools PRIVATE "${LEADTOOLS_LIB}")
 target_include_directories(ltools PRIVATE "${LEADTOOLS_INCDIR}")

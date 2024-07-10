@@ -216,22 +216,24 @@ public:
 	using std::runtime_error::runtime_error;
 };
 
-template<typename Error, typename BaseException = std::runtime_error>
+template<typename TErrorCode, typename BaseException = std::runtime_error>
 class ExceptionWithErrorCode : public BaseException
 {
 public:
+	using ErrorCode = TErrorCode;
+
 	template<typename... BaseArgs>
-	ExceptionWithErrorCode(Error code, BaseArgs&&... args)
+	ExceptionWithErrorCode(ErrorCode code, BaseArgs&&... args)
 	: BaseException(std::forward<BaseArgs>(args)...), m_code(code)
 	{}
 
-	const Error& code() const {
+	const ErrorCode& code() const {
 		return m_code;
 	}
 
 protected:
 	using ExceptionWithErrorCode_ = ExceptionWithErrorCode;
-	Error m_code;
+	ErrorCode m_code;
 };
 
 template<typename E, typename F>

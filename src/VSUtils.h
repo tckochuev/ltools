@@ -515,6 +515,16 @@ using UnorderedBimap = boost::bimap<
 	boost::bimaps::unordered_set_of<Y>
 >;
 
+inline std::unique_ptr<char[]> strdup(const char* s)
+{
+	assert(s);
+	auto size = std::strlen(s);
+	auto dupped = std::make_unique<char[]>(size + 1);
+	std::copy(s, s + size, dupped.get());
+	dupped[size] = 0;
+	return dupped;
+}
+
 } //namespace tc
 
 #endif
