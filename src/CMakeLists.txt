@@ -67,7 +67,7 @@ if(APPLE)
 elseif(WIN32)
     set(LEADTOOLS_INCDIR "C:/LEADTOOLS23/Include")
 elseif(UNIX)
-	target_compile_definitions(${TARGET_NAME} PRIVATE FOR_LINUX)
+	target_compile_definitions(ltools PRIVATE FOR_LINUX)
 	set(LEADTOOLS_INCDIR "/home/wolfox/Downloads/ltools/Include/")
 endif()
 
