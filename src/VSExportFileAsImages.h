@@ -34,21 +34,21 @@ using Path = std::filesystem::path;
 using FileFormat = std::string;
 struct FileFormats
 {
-    FileFormats() = delete;
-    inline static const char* Ppt = "ppt";
-    inline static const char* Pptx = "pptx";
-    inline static const char* Pdf = "pdf";
-    inline static const char* Odp = "odp";
+	FileFormats() = delete;
+	inline static const char* Ppt = "ppt";
+	inline static const char* Pptx = "pptx";
+	inline static const char* Pdf = "pdf";
+	inline static const char* Odp = "odp";
 };
 
 struct TypesHolder
 {
-    using Any = tc::file_as_img::Any;
-    using Path = tc::file_as_img::Path;
-    using FileFormat = tc::file_as_img::FileFormat;
+	using Any = tc::file_as_img::Any;
+	using Path = tc::file_as_img::Path;
+	using FileFormat = tc::file_as_img::FileFormat;
 	using InvalidFileFormat = tc::file_as_img::InvalidFileFormat;
 	using NoPagesAvailable = tc::file_as_img::NoPagesAvailable;
-    using FileFormats = tc::file_as_img::FileFormats;
+	using FileFormats = tc::file_as_img::FileFormats;
 };
 
 namespace fs
@@ -66,17 +66,17 @@ using String = std::string;
 using AnyImageNameGenerator = std::function<String()>;
 struct ImageFormats
 {
-    inline static const char* Jpg = "jpg";
-    inline static const char* Png = "png";
+	inline static const char* Jpg = "jpg";
+	inline static const char* Png = "png";
 };
 
 struct TypesHolder : tc::file_as_img::TypesHolder
 {
-    using ImageFormat = fs::ImageFormat;
-    using String = fs::String;
-    using AnyImageNameGenerator = fs::AnyImageNameGenerator;
+	using ImageFormat = fs::ImageFormat;
+	using String = fs::String;
+	using AnyImageNameGenerator = fs::AnyImageNameGenerator;
 	using InvalidImageFormat = fs::InvalidImageFormat;
-    using ImageFormats = fs::ImageFormats;
+	using ImageFormats = fs::ImageFormats;
 };
 
 class IThumbnailGenerator : public TypesHolder
@@ -141,18 +141,18 @@ class IBitmap;
 using PixelFormat = std::string;
 struct PixelFormats
 {
-    ///@brief specifies one 32-bit unit encoding(0xAARRGGBB).
-    inline static const char* Argb32 = "argb32";
-    ///@brief specifies 4 8-bit units in order r,g,b,a.
-    inline static const char* Rgba8888 = "rgba8888";
+	///@brief specifies one 32-bit unit encoding(0xAARRGGBB).
+	inline static const char* Argb32 = "argb32";
+	///@brief specifies 4 8-bit units in order r,g,b,a.
+	inline static const char* Rgba8888 = "rgba8888";
 };
 
 struct TypesHolder : tc::file_as_img::TypesHolder
 {
-    using PixelFormat = mem::PixelFormat;
+	using PixelFormat = mem::PixelFormat;
 	using IBitmap = mem::IBitmap;
 	using InvalidPixelFormat = mem::InvalidPixelFormat;
-    using PixelFormats = mem::PixelFormats;
+	using PixelFormats = mem::PixelFormats;
 };
 
 class IBitmap
@@ -172,7 +172,7 @@ public:
 class Bitmap : public IBitmap
 {
 public:
-    Bitmap(std::shared_ptr<const Byte[]> data, Size width, Size height, PixelFormat format)
+	Bitmap(std::shared_ptr<const Byte[]> data, Size width, Size height, PixelFormat format)
 		: m_format(std::move(format)), m_data(std::move(data)), m_width(width), m_height(height)
 	{
 		assert(m_data);
@@ -196,7 +196,7 @@ public:
 
 private:
 	PixelFormat m_format;
-    std::shared_ptr<const Byte[]> m_data;
+	std::shared_ptr<const Byte[]> m_data;
 	Size m_width;
 	Size m_height;
 };
